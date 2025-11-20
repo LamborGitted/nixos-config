@@ -3,7 +3,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    
     settings = {
 
       monitor = ",preferred,auto,1.25";
@@ -20,8 +19,8 @@
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        #"color.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        #"color.inactive_border" = "rgba(595959aa)";
+        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+        "col.inactive_border" = "rgba(595959aa)";
         layout = "dwindle";
       };
       
@@ -35,7 +34,7 @@
         #drop_shadow = true;
         #shadow_range = 4;
         #shadow_render_power = 3;
-        #"color.shadow" = "rgba(1a1a1aee)";
+        #"col.shadow" = "rgba(1a1a1aee)";
       };
       
       animations = {
@@ -69,6 +68,7 @@
         "SUPER, F, exec, firefox"
         "SUPER, V, togglefloating"
 	      "SUPER, D, exec, fuzzel"
+        "SUPER, I, exec, code"
         "SUPER, P, pseudo"
         "SUPER, J, togglesplit"
         "SUPER, 1, workspace, 1"

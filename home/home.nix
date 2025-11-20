@@ -13,15 +13,16 @@
     ./program/vscode.nix
     ./program/waybar.nix
     ./program/zsh.nix
+    ./program/kitty.nix  
   ];
 
 
   home.packages = with pkgs; [
-
-    kitty
     fuzzel
     clash-verge-rev
     firefox
-
+    qq
+    obs-studio
+    spotify
   ];
 }
