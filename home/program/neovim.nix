@@ -29,6 +29,14 @@
   };
 
   home.file.".config/nvim" = {
-    source = config.lib.file.mkOutOfStoreSymlink "./neovim/config";
+    source = config.lib.file.mkOutOfStoreSymlink "./neovim/config/";
   };
+
+  home.packages = with pkgs; [
+    nil
+    lua-language-server
+    nodePackages.typescript-language-server
+    rust-analyzer
+    
+  ];
 }

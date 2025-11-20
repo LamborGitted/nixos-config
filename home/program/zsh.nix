@@ -39,5 +39,8 @@
 
   home.packages = with pkgs;[
     fzf
+    bat 
+    eza
+    neofetch
   ];
 }

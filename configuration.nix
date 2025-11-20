@@ -27,24 +27,47 @@
   
 
   # system
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.05";
   nixpkgs.config.allowUnfree = true;
 
 
   # i18n.ibus
+  # i18n.inputMethod = {
+  #   enabled = "ibus"; 
+  #   ibus.engines = with pkgs.ibus-engines; [
+  #     libpinyin  
+  #     rime       
+  #     table      
+  #     table-chinese  
+  #   ];
+  # };
+  # i18n.supportedLocales = [ "zh_CN.UTF-8/UTF-8" "en_US.UTF-8/UTF-8" ];
+  # environment.variables = {
+  #   GTK_IM_MODULE = "ibus";
+  #   QT_IM_MODULE = "ibus";
+  #   XMODIFIERS = "@im=ibus";
+  #   SDL_IM_MODULE = "ibus";
+  #   CLUTTER_IM_MODULE = "ibus";
+  #   GLFW_IM_MODULE = "ibus";
+  # };
+
+  #i18n.fcitx5
   i18n.inputMethod = {
-    enabled = "ibus"; 
-    ibus.engines = with pkgs.ibus-engines; [
-      libpinyin  
-      rime       
-      table      
-      table-chinese  
+    enabled = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-gtk
+      qt6Packages.fcitx5-chinese-addons 
+      fcitx5-nord 
+      fcitx5-rime           
     ];
   };
   environment.variables = {
-    GTK_IM_MODULE = "ibus";
-    QT_IM_MODULE = "ibus";
-    XMODIFIERS = "@im=ibus";
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
+    XMODIFIERS = "@im=fcitx";
+    SDL_IM_MODULE = "fcitx";
+    CLUTTER_IM_MODULE = "fcitx";
+    GLFW_IM_MODULE = "fcitx";
   };
 
 

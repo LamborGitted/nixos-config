@@ -16,12 +16,12 @@
   ];
 
 
-
   home.packages = with pkgs; [
+
     kitty
     fuzzel
     clash-verge-rev
-    bat
     firefox
+
   ];
 }

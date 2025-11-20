@@ -56,7 +56,9 @@
       ];
       
       exec-once = [
-        "fcitx5 -d"
+        "ibus-daemon -drx"
+        "fcitx5 -r --enable fcitx5-rime"
+        "waybar"
       ];
 
       bind = [
