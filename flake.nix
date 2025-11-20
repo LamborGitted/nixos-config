@@ -29,6 +29,7 @@
       specialArgs = {
         username = "lambor";
         userEmail = "lambor.lambda@gmail.com";
+        inherit self;
       };
     };
   };

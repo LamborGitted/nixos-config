@@ -14,6 +14,7 @@
     ./program/waybar.nix
     ./program/zsh.nix
     ./program/kitty.nix  
+    ./program/wallpaper.nix
   ];
 
 

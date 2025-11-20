@@ -1,10 +1,10 @@
-{ config, pkgs, self, ... }:
+{ config, pkgs, self,... }:
 
 {
   xdg.configFile."waypaper/config.ini".text = ''
     [Settings]
     backend = swww
-    wallpaper_directory = ${self}/backgoundImage
+    wallpaper_directory = ${config.home.homeDirectory}/Pictures/Wallpapers
     fill = fill
     random_wallpaper = true
     swww_transition_type = any
@@ -12,7 +12,7 @@
     swww_transition_duration = 3
   '';
 
-  services.swww = {
+  systemd.user.services.swww = {
     Unit = {
       Description = "swww daemon";
       After = [ "graphical-session.target" ];
@@ -27,7 +27,7 @@
   };
 
 
-  home.packages = with pkgs[
+  home.packages = with pkgs;[
     waypaper
     swww
   ];

@@ -52,6 +52,7 @@
       windowrule = [
         #"float, ^(kitty)$"
         #"float, ^(file-roller)$"
+        "center , class:^(pavucontrol)$"
       ];
       
       exec-once = [
