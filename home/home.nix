@@ -24,5 +24,6 @@
     qq
     obs-studio
     spotify
+    nautilus
   ];
 }

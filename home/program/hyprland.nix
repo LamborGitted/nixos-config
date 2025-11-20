@@ -58,6 +58,8 @@
         "ibus-daemon -drx"
         "fcitx5 -r --enable fcitx5-rime"
         "waybar"
+        "swww-daemon"
+        "waypaper --restore"
       ];
 
       bind = [
