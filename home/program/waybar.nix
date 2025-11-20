@@ -1,17 +1,14 @@
 {config,pkgs,...}:
-{
-  programs.waybar = {
-    enable = true;
-    settings.mainBar = {
-      layer = "top";
-      position = "top";
-      height = 35;
-      spacing = 4;
-    };
-  
+let 
+  theme = "shorin@waybar";
+
+  themeDir = builtins.toPath ./home/program/waybar/${theme}/;
     
-    style = ''
-      
-    '';
-  };
+in {
+
+  xdg.configFile."waybar".source = themeDir;
+
+  home.packages = with pkgs;[
+    waybar
+  ];
 }

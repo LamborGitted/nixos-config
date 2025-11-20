@@ -1,4 +1,4 @@
-{ config, pkgs,username,userEmail, ... }: {
+{ config, pkgs,username,userEmail, self,... }: {
 
   imports = [ 
     ./program.nix
@@ -11,7 +11,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = {
-      inherit username userEmail;
+      inherit username userEmail self;
     };
     users.${username} = {
       imports = [ ./home/home.nix ];
@@ -105,7 +105,7 @@
       "https://cache.nixos.org"
     ];
     settings={
-       max-jobs = "auto";     
+      max-jobs = "auto";     
       cores = 0;         
       auto-optimise-store = true;
     };

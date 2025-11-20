@@ -7,6 +7,7 @@
       background_opacity = "0.9";
       dynamic_background_opacity = "yes";
       background_blur = 5;   
+      font_size = 12.0;      
     };
   };
 

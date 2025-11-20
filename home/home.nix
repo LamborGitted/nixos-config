@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, user, username , userEmail,... }:
+{ slef,config, pkgs, inputs, user, username , userEmail,... }:
 
 {
   home.username = username;

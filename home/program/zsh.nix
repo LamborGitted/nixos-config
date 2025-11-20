@@ -27,6 +27,8 @@
       export SDL_VIDEODRIVER=wayland
       export XDG_SESSION_TYPE=wayland
       export MOZ_ENABLE_WAYLAND=1
+
+      neofetch
       
     '';
     

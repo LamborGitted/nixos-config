@@ -5,19 +5,22 @@
     xwayland.enable = true;
     settings = {
 
-      monitor = ",preferred,auto,1.25";
+      monitor = ",preferred,auto,1";
       
       input = {
         kb_layout = "us";
         follow_mouse = 1;
-        touchpad = {
-          natural_scroll = true;
+        touchpad ={
+          natural_scroll=true; 
+          scroll_factor=1.0;
+          tap-to-click=true;
+          disable_while_typing=true;
         };
       };
       
       general = {
-        gaps_in = 5;
-        gaps_out = 20;
+        gaps_in = 4;
+        gaps_out = 8;
         border_size = 2;
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
@@ -52,13 +55,13 @@
       windowrule = [
         #"float, ^(kitty)$"
         #"float, ^(file-roller)$"
-        "center , class:^(pavucontrol)$"
+        "float , class:^(waypaper)$"
       ];
       
       exec-once = [
         "ibus-daemon -drx"
         "fcitx5 -r --enable fcitx5-rime"
-        "waybar"
+        "waybar &"
         "swww-daemon"
         "waypaper --restore"
       ];
@@ -92,6 +95,7 @@
         "SUPER SHIFT, 7, movetoworkspace, 7"
         "SUPER SHIFT, 8, movetoworkspace, 8"
         "SUPER SHIFT, 9, movetoworkspace, 9"  
+
       ];
       
       bindm = [

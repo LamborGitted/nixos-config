@@ -1,0 +1,495 @@
+@import "colors.css";
+/* @import "/home/shorin/.cache/wal/colors-waybar.css"; */
+
+/* 这个waybar因为大该过一次布局，所以箭头已经的位置和名字已经完全对不上了，从左到右对应从上到下看吧。 */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font Propo";
+    /* font-family:"0xProto Nerd Font Propo"; */
+    font-size: 18px;
+    opacity: 1;
+}
+
+window#waybar {
+    background: transparent;
+    color: @on_surface;
+}
+
+/* 鼠标悬浮信息提示 */
+tooltip {
+    background: @secondary_container;
+    border: 3px solid @outline;
+    opacity: 1;
+}
+
+tooltip label {
+    color: @on_surface;
+    font-size: 16px;
+}
+
+
+/* 工作区 */
+#workspaces button {
+    padding: 0px 10px;
+    background: @surface_container;
+    color: @tertiary_container;
+}
+
+/* #workspaces label {
+    font-size: 22;
+} */
+
+#workspaces button:hover {
+    background: @on_tertiary;
+}
+
+#workspaces button.active{
+    color:@tertiary;
+}
+
+#custom-right_div.5 {
+    background: @surface_bright;
+    color: @surface_container;
+    font-size: 25px;
+    padding: 0px;
+}
+
+/* waybar niri taskbar */
+.niri-taskbar {
+    background: @surface_bright;
+    padding: 0 0 0 5px;
+}
+
+.niri-taskbar button:hover {
+    background: @surface_container;
+}
+
+.niri-taskbar button.focused {
+    background: @inverse_primary;
+}
+
+.niri-taskbar button.urgent {
+    background-color: @tertiary;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes blink {
+    to {
+        background-color: @primary;
+        color: @error;
+    }
+}
+
+/* 窗口名 */
+#window {
+    padding: 0px 10px;
+    background-color: @surface_bright;
+    color: @on_surface;
+}
+
+#window label {
+    font-size: 16px;
+}
+
+window#waybar.empty #window {
+    background-color: @surface_bright;
+}
+
+#custom-right_div.6 {
+    color: @surface_bright;
+    font-size: 25px;
+    padding: 0px;
+}
+/* —————————————————————————————————————————————————————————————————————————— */
+/* —————————————————————————————————————————————————————————————————————————— */
+/* —————————————————————————————————————————————————————————————————————————— */
+/* —————————————————————————————————————————————————————————————————————————— */
+/* —————————————————————————————————————————————————————————————————————————— */
+
+/* 中间 */
+
+#custom-left_div.3 {
+    color: @surface_container_high;
+    padding: 0px;
+    font-size: 25px;
+}
+
+
+#bluetooth {
+    padding: 0px 7px;
+    font-size: 20px;
+}
+
+#network {
+    padding: 0px 7px;
+    font-size: 22px;
+
+}
+
+#custom-settings {
+    padding: 0px 7px;
+    font-size: 19px;
+}
+
+#custom-screenshot {
+    padding: 0 7px;
+    font-size: 22px;
+}
+
+/* wf-recoder脚本 */
+#custom-wfrec {
+  padding: 0 7px;
+}
+
+#custom-wfrec.recording,
+#custom-wfrec,
+#bluetooth,
+#network,
+#custom-settings,
+#custom-screenshot {
+    background-color: @surface_container_high;
+    color: @secondary;
+}
+/* 录制中 */
+#custom-wfrec.recording {
+  color: @error;            
+}
+/* #custom-wfrec,
+#custom-screenshot{
+    color: @secondary;
+} */
+
+#custom-left_div.2 {
+    background-color: @surface_container_high;
+    color: @tertiary;
+    padding: 0px 0px;
+    font-size: 25px;
+}
+
+#power-profiles-daemon,
+#custom-colorpicker,
+#idle_inhibitor {
+    background-color: @tertiary;
+    color: @on_tertiary;
+    padding: 0px 6px;
+}
+
+#power-profiles-daemon.performance {
+    color: @on_error;
+    font-size: 23px;
+    padding: 0px 9px 0px 8px;
+}
+
+#power-profiles-daemon.balanced {
+    color: @on_tertiary;
+}
+
+#power-profiles-daemon.power-saver {
+    color: #1aa052;
+
+}
+
+/* 菜单 */
+#custom-left_div.11 {
+    background-color: @tertiary;
+    color: @surface_container
+}
+#custom-applauncher {
+    font-size: 25px;
+    padding: 0px 7px;
+    margin: 0px;
+    background-color: @primary;
+    color: @on_primary;
+
+}
+#custom-right_div.1,
+#custom-left_div.1 {
+    background-color: @surface_container;
+    color: @primary;
+}
+#custom-left_div.1,
+#custom-right_div.1 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 25px;
+}
+#custom-left_div.11,
+#custom-right_div.11 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+}
+#custom-right_div.11 {
+
+    background-color: @secondary;
+    color: @surface_container;
+}
+
+/*中间右边第二级*/
+
+#clock {
+    padding: 0px 8px;
+}
+
+#clock {
+    background-color: @secondary;
+    color: @on_secondary;
+}
+
+#custom-right_div.2 {
+    background-color: @surface_container_high;
+    color: @secondary;
+    padding: 0px;
+    font-size: 25px;
+}
+
+#custom-cava {
+    background-color: @surface_container_high;
+    color: @primary;
+    padding: 0px 7px;
+}
+
+#mpris {
+    background-color: @surface_container_high;
+    color: @primary;
+    padding: 0px 7px 0px 0px;
+}
+
+#custom-right_div.3 {
+
+    color: @surface_container_high;
+    padding: 0px;
+    font-size: 25px;
+}
+#custom-right_div.4 {
+    /* background-color: @surface_container_high; */
+    color: @on_secondary;
+    padding: 0px;
+    font-size: 25px;
+}
+/* —————————————————————————————————————————————————————————————————————————— */
+/* —————————————————————————————————————————————————————————————————————————— */
+/* —————————————————————————————————————————————————————————————————————————— */
+/* —————————————————————————————————————————————————————————————————————————— */
+/* —————————————————————————————————————————————————————————————————————————— */
+
+/* 右侧 */
+
+
+#custom-left_div.7 {
+    /* background-color: @surface_container_high; */
+    color: @surface_bright;
+    font-size: 25px;
+    padding: 0px;
+}
+
+
+#custom-updates {
+    border-radius: 0px;
+    padding: 0px 3px 0px 7px;
+    background-color: @surface_bright;
+    color: @error;
+
+}
+
+#tray {
+    padding: 0px 7px 0px 7px;
+    font-size: 20px;
+    background-color: @surface_bright;
+}
+
+
+#custom-left_div.4 {
+    background-color: @surface_bright;
+    color: @surface_container_high;
+    padding: 0px;
+    font-size: 25px;
+}
+/* 亮度 */
+#custom-ddcutil-day,
+#custom-ddcutil-night,
+#custom-ddcutil-sleep,
+#custom-separator.1 {
+    background-color: @surface_container_high;
+    color: @tertiary;
+    padding: 0px 5px;
+}
+
+#backlight {
+    background-color: @surface_container_high;
+    color: @tertiary;
+    padding: 0px 5px 0px 0px;
+}
+
+#backlight-slider {
+    background-color: @surface_container_high;
+    padding: 0px 5px 0px 0px;
+}
+
+#backlight-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+#backlight-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    opacity: 0;
+    background-color: @background;
+}
+
+#backlight-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: @tertiary;
+}
+
+/* 音视频 */
+#privacy {
+    padding: 0px 7px;
+}
+
+#privacy {
+    background-color: @surface_container_high;
+    color: @error;
+}
+
+#pulseaudio {
+    padding: 0px 0px 0px 5px;
+}
+
+#pulseaudio-slider {
+    padding: 0px 0px 0px 10px;
+    margin: 0px;
+}
+
+#pulseaudio-slider,
+#pulseaudio {
+    background-color: @surface_container_high;
+    color: @tertiary;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    box-shadow: none;
+    background: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    background-color: @surface;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 0px;
+    border-radius: 5px;
+    background-color: @tertiary;
+}
+
+#custom-left_div.8 {
+    background-color: @surface_container_high;
+    color: @surface_bright;
+    font-size: 25px;
+    padding: 0px;
+}
+
+
+/* 电池 */
+
+#battery {
+    background-color: @surface_bright;
+    color: @secondary;
+    padding: 0px 7px;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @error;
+    color: @on_error;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    padding: 0px 7px;
+}
+
+/* powermenu电源菜单 */
+#custom-left_div.5 {
+    background-color: @surface_bright;
+    color: @surface_container;
+    padding: 0px;
+    font-size: 25px;
+}
+#custom-wlogout {
+    padding: 0px 15px 0px 10px;
+    font-size: 25px;
+}
+
+#custom-wlogout,
+#custom-reboot,
+#custom-lockscreen,
+#custom-logout {
+    background-color: @surface_container;
+    color: @error;
+    padding: 0px 10px;
+}
+
+
+
+
+
+#clock.date {
+    padding: 0px 7px;
+}
+#custom-datelogo,
+#clock.date {
+    background-color: @secondary_container;
+    color: @on_secondary_container;
+}
+
+#custom-swaync {
+    background-color: @surface_container_high;
+    color: @on_surface_container;
+    padding: 0px 15px;
+}
+
+#custom-mako {
+    background-color: @surface_container_high;
+    color: @on_surface_container;
+    padding: 0px 15px;
+}
+
+#custom-left_div.6 {
+    background-color: @surface;
+    color: @surface_container_high;
+    padding: 0px;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

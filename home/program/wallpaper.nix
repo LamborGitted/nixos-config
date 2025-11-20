@@ -4,7 +4,7 @@
   xdg.configFile."waypaper/config.ini".text = ''
     [Settings]
     backend = swww
-    wallpaper_directory = ${config.home.homeDirectory}/Pictures/Wallpapers
+    wallpaper_directory = ${self}/Pictures/Wallpapers
     fill = fill
     random_wallpaper = true
     swww_transition_type = any
